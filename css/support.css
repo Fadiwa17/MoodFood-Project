@@ -1,0 +1,113 @@
+/* 
+Names of Submitters:
+Fadi Waheb I.D: 211629282
+Odaya Ifrach I.D: 212777155
+Adam Abd Elhaq I.D: 318239571 */
+
+/* --- 1. מעטפת ופריסה כללית (Layout) --- */
+.support-container {
+    max-width: 600px;
+    margin: 120px auto 80px auto; 
+    padding: 40px;
+    background-color: #1a1a1a;
+    border-radius: 15px;
+    border: 1px solid #333;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* --- 2. טיפוגרפיה (Typography) --- */
+.support-container h1 {
+    color: #66ff99;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.support-container p {
+    color: #ccc;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+/* --- 3. טופס ותוויות (Form & Labels) --- */
+.support-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* יישור ושליטה בתוויות שהוספנו להנגשת הטופס */
+.form-group {
+    text-align: right; 
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #ddd;
+    font-weight: bold;
+}
+
+/* --- 4. שדות קלט --- */
+.support-form input, 
+.support-form textarea {
+    width: 100%;
+    padding: 15px;
+    background-color: #0d0d0d;
+    border: 1px solid #333;
+    color: white;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.support-form input:focus, 
+.support-form textarea:focus {
+    border-color: #66ff99;
+    outline: none;
+    box-shadow: 0 0 10px rgba(102, 255, 153, 0.2);
+}
+
+.support-form textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+/* --- 5. כפתור שליחה (Submit Button) --- */
+.btn-submit {
+    background-color: #66ff99;
+    color: black;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.btn-submit:hover {
+    background-color: #4ce680;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(102, 255, 153, 0.3);
+}
+
+/* --- 6. התאמה למובייל (Mobile Responsiveness) --- */
+@media (max-width: 600px) {
+    .support-container {
+        margin: 100px 15px 40px 15px;
+        padding: 30px 20px;
+    }
+
+    .support-container h1 {
+        font-size: 2rem;
+    }
+
+    /* ביטול אנימציית ריחוף למניעת היתקעות במכשירי מגע */
+    .btn-submit:hover {
+        transform: none;
+        box-shadow: none;
+    }
+}

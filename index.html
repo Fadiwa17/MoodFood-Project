@@ -1,0 +1,106 @@
+<!--
+Names of Submitters:
+Fadi Waheb I.D: 211629282
+Odaya Ifrach I.D: 212777155
+Adam Abd Elhaq I.D: 318239571
+-->
+
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mood Food - דף הבית</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/general-styling.css">
+    <link rel="stylesheet" href="css/index.css">
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍔</text></svg>">
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo-link">
+            <img src="images/logo.png" alt="לוגו Mood Food" class="logo-img">
+        </a>
+        
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">בית</a></li>
+                <li><a href="includes/moods.html">תפריט מנות</a></li>
+                <li><a href="includes/add-mood.html">הוספת מתכון</a></li>
+                <li><a href="includes/about.html">אודות</a></li>
+                <li><a href="includes/support.html">תמיכה</a></li>
+            </ul>
+        </nav>
+
+        <button class="hamburger" aria-label="תפריט ניווט">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <main>
+        
+        <section class="hero">
+            <div class="video-container">
+                <video autoplay muted loop playsinline poster="images/poster.jpg">
+                    <source src="media/food-video.mp4" type="video/mp4">
+                    הדפדפן שלך לא תומך בווידאו.
+                </video>
+                <div class="overlay"></div>
+            </div>
+            
+            <div class="hero-content">
+                <h1 id="mainGreeting">לאכול לפי מצב הרוח</h1>
+                <p>גלו מנות שישפרו לכם את היום או ינחמו אתכם ברגע הנכון.</p>
+                <div class="buttons">
+                    <a href="includes/moods.html" class="btn-primary">בחר מנה</a>
+                    <a href="includes/add-mood.html" class="btn-secondary">הוסף מתכון</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-concept">
+            <div class="container">
+                <h2>האוכל הנכון, ברגע הנכון</h2>
+                <p class="lead-text">
+                    עד היום, לבחור אוכל לפי איך שאתם מרגישים היה נראה כמו חלום רחוק. ב-<strong>Mood Food</strong>, אנחנו הופכים את זה למציאות. 
+                </p>
+                <div class="concept-item">
+                    <p>אנחנו מאמינים שאוכל הוא לא רק דלק – הוא חוויה רגשית. האתר שלנו עוזר לכם להקשיב לבטן וללב בו-זמנית. <strong>אל תאכלו סתם – תאכלו עם כוונה.</strong></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            
+            <a href="includes/mood_results.php?filter=fast" class="feature-card">
+                <h3>🚀 מהיר</h3>
+                <p>מתכונים עד 20 דקות</p>
+            </a>
+
+            <a href="includes/mood_results.php?filter=healthy" class="feature-card">
+                <h3>❤️ בריא</h3>
+                <p>מרכיבים טריים בלבד</p>
+            </a>
+
+            <a href="includes/mood_results.php?filter=top" class="feature-card">
+                <h3>😋 טעים</h3>
+                <p>מנות שנבחרו בקפידה</p>
+            </a>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Mood Food - פאדי, אדם ואודיה</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,71 @@
+/* 
+Names of Submitters:
+Fadi Waheb I.D: 211629282
+Odaya Ifrach I.D: 212777155
+Adam Abd Elhaq I.D: 318239571 */
+
+/* --- 1. התאמות עיצוב גלובליות לשילוב עם Bootstrap --- */
+body {
+    background-color: black;
+    color: white;
+}
+
+.recipe-container {
+    margin-top: 120px; 
+    margin-bottom: 50px;
+}
+
+/* --- 2. עיצוב כרטיסיות  --- */
+.card-custom {
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    color: white;
+}
+
+.text-theme {
+    color: #66ff99 !important;
+}
+
+/* --- 3. עיצוב תמונות --- */
+.recipe-main-image {
+    border: 3px solid #333;
+}
+
+.chef-avatar {
+    width: 50px; 
+    height: 50px; 
+    object-fit: cover; 
+    border: 2px solid #66ff99;
+}
+
+/* --- 4. כפתורים (Buttons) --- */
+.btn-theme {
+    background-color: #66ff99;
+    color: black;
+    font-weight: bold;
+    border: none;
+    transition: 0.3s ease;
+}
+
+.btn-theme:hover {
+    background-color: #4ce680;
+    color: black;
+}
+
+/* --- 5. טיפוגרפיה ושמירה על ירידות שורה מהדאטא-בייס --- */
+.preserve-lines {
+    white-space: pre-wrap;
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+/* --- 6. עיצוב הודעת שגיאה (Error Alert) --- */
+.alert-custom-error {
+    background-color: #330000; 
+    border-color: #ff4d4d; 
+    color: white;
+}
+
+.alert-custom-error hr {
+    border-color: #ff4d4d;
+}

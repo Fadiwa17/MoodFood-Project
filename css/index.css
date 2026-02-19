@@ -1,0 +1,370 @@
+/* 
+Names of Submitters:
+Fadi Waheb I.D: 211629282
+Odaya Ifrach I.D: 212777155
+Adam Abd Elhaq I.D: 318239571 */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: black;
+    font-family: 'Heebo', 'Poppins', sans-serif;
+    color: white;
+    overflow-x: hidden; 
+}
+
+/* ---  Header & Navigation (חלק עליון ותפריט ניווט) --- */
+header {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 0 1.5rem; 
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 85px;
+}
+
+header img {
+    height: 55px; 
+    width: auto;  
+    max-width: 100%; 
+    display: block;
+    object-fit: contain;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+/* עיצוב התפריט למסכים גדולים */
+nav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    margin-left: 180px; 
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 3rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 500;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    color: #66ff99;
+}
+
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: #66ff99;
+    bottom: -5px;
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* ---  Hamburger Menu (תפריט מובייל) --- */
+.hamburger {
+    display: none; 
+    flex-direction: column;
+    gap: 6px; 
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1100;
+    padding: 5px;
+    margin-right: auto; 
+}
+
+.hamburger span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #ffffff; 
+    border-radius: 2px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* ---  Hero Section (אזור הווידאו והפתיח) --- */
+.hero {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    padding-top: 85px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+}
+
+.hero-content p {
+    font-size: 1.3rem;
+    margin-bottom: 2.5rem;
+}
+
+/* ---  Buttons (עיצוב כפתורים גלובלי) --- */
+.buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap; 
+}
+
+.btn-primary, .btn-secondary {
+    padding: 0.8rem 2.5rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+/* התאמת צבעי המותג לכפתורים */
+.btn-primary {
+    background-color: #66ff99;
+    color: black;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border: 2px solid #66ff99;
+    color: white;
+}
+
+.btn-primary:hover, .btn-secondary:hover {
+    transform: scale(1.05);
+}
+
+.btn-primary:hover {
+    background-color: #4ce680;
+}
+
+.btn-secondary:hover {
+    background-color: #66ff99;
+    color: black;
+}
+
+/* ---  About & Features (קונספט האתר) --- */
+.about-concept, .features {
+    padding: 4rem 2rem;
+    background-color: #0a0a0a;
+    text-align: center;
+}
+
+.about-concept { 
+    border-bottom: 1px solid #333; 
+}
+
+.about-concept h2 { 
+    color: #66ff99; 
+    font-size: 2.5rem; 
+    margin-bottom: 1rem; 
+}
+
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    background-color: black;
+}
+
+.feature-card {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 2rem;
+    width: 300px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    text-decoration: none; 
+    color: white;          
+    display: block;        
+    cursor: pointer;       
+}
+
+.feature-card p {
+    color: #b3b3b3;
+}
+
+.feature-card h3 { 
+    color: #66ff99; 
+    margin-bottom: 10px; 
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    border-color: #66ff99;
+    box-shadow: 0 10px 25px rgba(102, 255, 153, 0.15);
+}
+
+/* ---  Footer (תחתית הדף) --- */
+footer {
+    padding: 2rem;
+    text-align: center;
+    border-top: 1px solid #333;
+    background-color: #000;
+    color: #888;
+}
+
+/* ---   התאמה למובייל --- */
+@media (max-width: 900px) {
+    
+    header {
+        position: fixed; 
+        top: 0;
+        width: 100%;
+        justify-content: space-between; 
+        padding: 0 15px; 
+    }
+
+    header img {
+        height: 35px;
+    }
+
+    .hamburger {
+        display: flex;
+        z-index: 1100;
+    }
+
+    .hamburger span {
+        background-color: #ffffff !important; 
+    }
+
+    /* עיצוב תפריט הצד הנפתח למובייל */
+    nav {
+        position: absolute;
+        top: 85px; 
+        left: 0;  
+        width: 100%;
+        max-width: 300px; 
+        height: auto; 
+        background-color: rgba(0, 0, 0, 0.95); 
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); 
+        border-radius: 0 0 15px 15px; 
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem 0;
+        gap: 1.5rem;
+        transform: translateY(-150%);
+        transition: transform 0.4s ease-in-out;
+        z-index: 1000;
+    }
+
+    nav.active {
+        transform: translateY(0);
+    }
+
+    nav { 
+        margin-left: 0; 
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li a {
+        font-size: 1.2rem;
+        display: block;
+        padding: 10px;
+        border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+    
+    nav ul li a::after { 
+        display: none; 
+    }
+
+    /* אנימציית פתיחה לכפתור ההמבורגר */
+    .hamburger.active span:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+    }
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger.active span:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+    
+    .feature-card:hover {
+        transform: none;
+        box-shadow: none;
+        border-color: rgba(255, 255, 255, 0.1);
+    }
+}
+
+/* --- מסכים צרים במיוחד --- */
+@media (max-width: 500px) {
+    .hero-content h1 { 
+        font-size: 2rem; 
+    }
+    .feature-card { 
+        width: 100%; 
+    }
+}

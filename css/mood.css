@@ -1,0 +1,117 @@
+/* 
+Names of Submitters:
+Fadi Waheb I.D: 211629282
+Odaya Ifrach I.D: 212777155
+Adam Abd Elhaq I.D: 318239571 */
+
+/* --- 1. Container --- */
+.moods-container {
+    padding-top: 130px; 
+    text-align: center;
+    min-height: 80vh;
+    background-color: #000; 
+}
+
+/* --- 2. כותרת הדף --- */
+.page-intro {
+    margin-bottom: 40px;
+    padding: 0 20px;
+}
+
+.page-intro h1 {
+    color: #66ff99;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.page-intro p {
+    color: #ccc;
+    font-size: 1.2rem;
+}
+
+.mood-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 40px auto; 
+    padding: 0 20px;
+    justify-content: center; 
+}
+
+/* עטיפת הקישור */
+.mood-link {
+    text-decoration: none; 
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+/* --- 3. עיצוב כרטיסייה בודדת --- */
+.mood-card {
+    background-color: #121212;
+    padding: 30px;
+    border-radius: 20px;
+    border: 1px solid #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    transition: all 0.3s ease;
+    width: 100%;
+    max-width: 320px; 
+}
+
+/* תמונת האימוג'י / מצב הרוח */
+.mood-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #66ff99;
+    margin-bottom: 20px;
+}
+
+.mood-card h2 {
+    font-size: 1.5rem;
+    color: white;
+    margin-top: 10px;
+}
+
+/*  למסכים גדולים  */
+.mood-card:hover {
+    transform: translateY(-10px);
+    border-color: #66ff99;
+    background-color: #181818;
+    box-shadow: 0 10px 20px rgba(102, 255, 153, 0.15);
+}
+
+/* --- 4. התאמה למובייל --- */
+@media (max-width: 768px) {
+    .moods-container {
+        padding-top: 100px; 
+    }
+
+    .page-intro h1 {
+        font-size: 2rem;
+    }
+
+    .mood-grid {
+        gap: 20px; 
+    }
+
+    .mood-card {
+        padding: 20px;
+    }
+
+    .mood-img {
+        width: 120px; 
+        height: 120px;
+    }
+
+    .mood-card:hover {
+        transform: none;
+        border-color: #333;
+        background-color: #121212;
+        box-shadow: none;
+    }
+}

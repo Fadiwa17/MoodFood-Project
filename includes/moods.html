@@ -1,0 +1,106 @@
+<!--
+Names of Submitters:
+Fadi Waheb I.D: 211629282
+Odaya Ifrach I.D: 212777155
+Adam Abd Elhaq I.D: 318239571
+-->
+
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mood Food - תפריט מנות</title>
+    
+    <link rel="stylesheet" href="../css/general-styling.css">
+    <link rel="stylesheet" href="../css/mood.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍔</text></svg>">
+</head>
+<body>
+
+    <header>
+        <a href="../index.html" class="logo-link">
+            <img src="../images/logo.png" alt="לוגו Mood Food" class="logo-img">
+        </a>
+        
+        <nav>
+            <ul>
+                <li><a href="../index.html">בית</a></li>
+                <li><a href="moods.html" class="active">תפריט מנות</a></li>
+                <li><a href="add-mood.html">הוספת מתכון</a></li>
+                <li><a href="about.html">אודות</a></li>
+                <li><a href="support.html">תמיכה</a></li>
+            </ul>
+        </nav>
+
+        <button class="hamburger" aria-label="תפריט ניווט">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <main class="moods-container">
+        
+        <section class="page-intro">
+            <h1>איך אתם מרגישים עכשיו?</h1>
+            <p>בחרו את האימוג'י שמתאר אתכם, ואנחנו נדאג לאוכל</p>
+        </section>
+
+        <section class="mood-grid">
+            
+            <a href="mood_results.php?mood=happy" class="mood-link">
+                <article class="mood-card">
+                    <img src="../images/happy.jpeg" alt="שמח" class="mood-img">
+                    <h2>שמח</h2>
+                </article>
+            </a>
+
+            <a href="mood_results.php?mood=party" class="mood-link">
+                <article class="mood-card">
+                    <img src="../images/party.jpeg" alt="חגיגי" class="mood-img">
+                    <h2>חגיגי</h2>
+                </article>
+            </a>
+
+            <a href="mood_results.php?mood=angry" class="mood-link">
+                <article class="mood-card">
+                    <img src="../images/angry.jpeg" alt="עצבני" class="mood-img">
+                    <h2>עצבני</h2>
+                </article>
+            </a>
+
+            <a href="mood_results.php?mood=stressed" class="mood-link">
+                <article class="mood-card">
+                    <img src="../images/stressed.jpeg" alt="לחוץ" class="mood-img">
+                    <h2>לחוץ</h2>
+                </article>
+            </a>
+
+            <a href="mood_results.php?mood=sad" class="mood-link">
+                <article class="mood-card">
+                    <img src="../images/sad.jpeg" alt="מנחם" class="mood-img">
+                    <h2>מנחם</h2>
+                </article>
+            </a>
+
+            <a href="mood_results.php?mood=random" class="mood-link">
+                <article class="mood-card">
+                    <img src="../images/confused.jpeg" alt="לא יודע" class="mood-img">
+                    <h2>תפתיעו אותי</h2>
+                </article>
+            </a>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Mood Food - פאדי, אדם ואודיה</p>
+    </footer>
+
+    <script src="../js/script.js"></script>
+
+</body>
+</html>

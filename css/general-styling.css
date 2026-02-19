@@ -1,0 +1,155 @@
+/* 
+Names of Submitters:
+Fadi Waheb I.D: 211629282
+Odaya Ifrach I.D: 212777155
+Adam Abd Elhaq I.D: 318239571 */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none; 
+}
+
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Heebo', sans-serif;
+    direction: rtl; /* הגדרת כיווניות לעברית */
+    overflow-x: hidden; /* מניעת גלילה אופקית במסכים קטנים */
+}
+
+/* --- אזור עליון ותפריט ניווט (Header & Navigation) --- */
+header {
+    background-color: #111;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 0 30px; 
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #222;
+}
+
+header .logo-img {
+    height: 50px;
+    width: auto;
+    max-width: 100%;
+}
+
+/* עיצוב התפריט למסכים גדולים */
+nav ul {
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    white-space: nowrap; 
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    color: #66ff99; /* הדגשת הקישור הפעיל או בעת ריחוף */
+}
+
+/* ---  כפתור תפריט למובייל (Hamburger Icon) --- */
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 6px; 
+    padding: 5px;
+    z-index: 1001;
+    margin-right: auto; 
+}
+
+.hamburger span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: white; 
+    border-radius: 2px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* ---  Footer --- */
+footer {
+    width: 100%;
+    background-color: #000;
+    border-top: 1px solid #222;
+    padding: 30px 0;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center; 
+    align-items: center;    
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+    color: #888;
+    font-size: 0.9rem;
+    direction: rtl; 
+}
+
+/* ---  עיצוב רספונסיבי למובייל (Media Queries) --- */
+@media (max-width: 900px) {
+    
+    header {
+        padding: 0 15px; 
+    }
+
+    header .logo-img {
+        height: 35px; /* הקטנת הלוגו למניעת התנגשות עם כפתור ההמבורגר */
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    /* עיצוב תפריט צד נפתח לתצוגת מובייל */
+    nav {
+        position: absolute;
+        top: 80px; 
+        left: 0;
+        width: 100%; 
+        background-color: #111;
+        border-bottom: 2px solid #66ff99;
+        transform: translateY(-150%); /* הסתרת התפריט מחוץ למסך כברירת מחדל */
+        transition: transform 0.4s ease-in-out; 
+        z-index: 900; 
+    }
+
+    nav.active {
+        transform: translateY(0); 
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center; 
+        padding: 30px 0;
+        gap: 25px;
+    }
+
+    nav ul li a {
+        font-size: 1.3rem;
+    }
+
+    .hamburger.active span:nth-child(2) {
+        opacity: 0; 
+    }
+    .hamburger.active span:nth-child(1) {
+        transform: translateY(9px) rotate(45deg); 
+    }
+    .hamburger.active span:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg); 
+    }
+}

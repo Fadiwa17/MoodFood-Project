@@ -1,0 +1,189 @@
+/* 
+Names of Submitters:
+Fadi Waheb I.D: 211629282
+Odaya Ifrach I.D: 212777155
+Adam Abd Elhaq I.D: 318239571 */
+
+/* --- 1. כותרת הדף (Header Section) --- */
+.results-header {
+    text-align: center;
+    padding: 120px 20px 40px; 
+    background-color: #111;
+}
+
+.results-header h1 {
+    color: #66ff99;
+    font-size: 2.5rem;
+}
+
+/* --- 2. גריד תוצאות המנות --- */
+.dishes-grid {
+    display: grid;
+    /* יצירת פריסה גמישה המותאמת לכמות המנות */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px; 
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    /* הגדרת גובה מינימלי למניעת קפיצות בעיצוב */
+    min-height: 400px; 
+}
+
+/* --- 3. עיצוב כרטיסיית מנה --- */
+.dish-card {
+    background-color: #1a1a1a;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid #333;
+    transition: 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: column;
+}
+
+/* אפקט Hover לשיפור חוויית המשתמש */
+.dish-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(102, 255, 153, 0.2);
+    border-color: #66ff99;
+}
+
+.card-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 2px solid #333;
+}
+
+.card-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; 
+}
+
+.card-content h2 {
+    color: white;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.card-content p {
+    color: #ccc;
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+}
+
+.card-content strong {
+    color: #66ff99;
+}
+
+/* שורת פרטי השף - שימוש ב-Flexbox למרכוז */
+.chef-line {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.chef-mini-pic {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #66ff99;
+    margin-left: 10px; 
+}
+
+/* --- 4. כפתורי פעולה (Action Buttons) --- */
+.btn-read-more {
+    display: block;
+    text-align: center;
+    background-color: #66ff99;
+    color: black;
+    padding: 12px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: auto; 
+    transition: 0.3s ease;
+}
+
+.btn-read-more:hover {
+    background-color: #4ce680;
+}
+
+/* --- 5. הודעות מערכת (System Messages) --- */
+.no-results {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 50px;
+    background-color: #1a1a1a;
+    border-radius: 15px;
+    border: 1px dashed #66ff99;
+}
+
+.no-results p {
+    font-size: 1.5rem;
+    color: white;
+    margin-bottom: 20px;
+}
+
+/* --- 6. ניווט חזרה --- */
+.bottom-back-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 40px auto;
+    text-align: center;
+    padding: 0 20px;
+    padding-bottom: 40px;
+}
+
+.btn-back-dynamic {
+    display: inline-block;
+    background-color: #66ff99;
+    color: #000;
+    text-decoration: none;
+    padding: 15px 40px;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn-back-dynamic:hover {
+    background-color: #4ce67f;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(102, 255, 153, 0.3);
+}
+
+/* --- 7. עיצוב רספונסיבי (Mobile Responsive) --- */
+@media (max-width: 768px) {
+    .results-header {
+        padding: 100px 15px 20px; 
+    }
+    
+    .results-header h1 {
+        font-size: 2rem; 
+    }
+
+    .dishes-grid {
+        /* פריסה של עמודה אחת למניעת חריגות ברוחב */
+        grid-template-columns: 1fr; 
+        padding: 20px 15px; 
+        gap: 20px;
+    }
+
+    /* ביטול אפקטים של ריחוף במסכי מגע למניעת תקלות בממשק */
+    .dish-card:hover {
+        transform: none;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        border-color: #333;
+    }
+
+    /* התאמת כפתור החזרה לרוחב מלא במובייל לשיפור הנגישות */
+    .btn-back-dynamic {
+        display: block;
+        width: 100%;
+    }
+}

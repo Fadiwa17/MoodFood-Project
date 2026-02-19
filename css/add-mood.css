@@ -1,0 +1,191 @@
+/* Names of Submitters:
+Fadi Waheb I.D: 211629282
+Odaya Ifrach I.D: 212777155
+Adam Abd Elhaq I.D: 318239571 
+*/
+
+/* --- 1. מעטפת הדף והטופס (Layout) --- */
+.form-container {
+    padding-top: 130px; 
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+
+.mood-form {
+    background-color: #121212;
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid #333;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* --- 2. טיפוגרפיה וכותרות (Typography) --- */
+.mood-form h2 {
+    text-align: center;
+    color: #66ff99;
+    margin-bottom: 20px;
+}
+
+.mood-form h3 {
+    color: #888;
+    border-bottom: 1px solid #333;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    margin-top: 0;
+}
+
+.divider {
+    border: 0;
+    border-top: 1px solid #333;
+    margin: 30px 0;
+}
+
+/* --- 3. מבנה שדות הטופס --- */
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.half-width {
+    flex: 1;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #ddd;
+}
+
+/* --- 4. עיצוב שדות קלט בסיסיים --- */
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group input[type="file"],
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    background-color: #1a1a1a;
+    border: 1px solid #444;
+    border-radius: 8px;
+    color: white;
+    font-family: 'Heebo', sans-serif;
+    font-size: 1rem;
+}
+
+/* --- 5. Custom Radio Buttons --- */
+.difficulty-wrapper {
+    display: flex;
+    gap: 15px;
+    justify-content: start;
+}
+
+.difficulty-wrapper input[type="radio"] {
+    display: none; 
+}
+
+.difficulty-wrapper label {
+    background-color: #222;
+    padding: 10px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 1px solid #444;
+    transition: 0.2s;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 20px; 
+    margin: 0;
+}
+
+.difficulty-wrapper input[type="radio"]:checked + label {
+    background-color: #66ff99;
+    color: black;
+    font-weight: bold;
+    transform: scale(1.1);
+}
+
+/* --- 6. עיצוב לבחירת מנה בריאה / מושחתת (Healthy Selection) --- */
+.healthy-radio-container {
+    background-color: #0d0d0d;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #333;
+    margin: 20px 0;
+    transition: border-color 0.3s ease;
+}
+
+.form-group .healthy-main-label {
+    font-weight: bold;
+    color: #66ff99; 
+    margin-bottom: 10px;
+    display: block;
+}
+
+.healthy-options-wrapper {
+    display: flex;
+    gap: 20px;
+    color: white;
+}
+
+/* שימוש בספציפיות לביטול המרווח התחתון המיותר */
+.healthy-options-wrapper .healthy-option {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 0; 
+}
+
+/* צביעת תיבות הרדיו בדפדפנים נתמכים */
+.radio-accent-green {
+    width: 18px;
+    height: 18px;
+    accent-color: #66ff99;
+}
+
+.radio-accent-red {
+    width: 18px;
+    height: 18px;
+    accent-color: #ff4d4d;
+}
+
+/* --- 7. כפתור השליחה (Submit Button) --- */
+.submit-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #66ff99;
+    color: black;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #4ce680;
+}
+
+/* --- 8. התאמה למובייל (Responsive Design) --- */
+@media (max-width: 600px) {
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    /* סידור אפשרויות המנה הבריאה אחת מתחת לשנייה במסכים קטנים */
+    .healthy-options-wrapper {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

@@ -1,0 +1,151 @@
+<!--
+Names of Submitters:
+Fadi Waheb I.D: 211629282
+Odaya Ifrach I.D: 212777155
+Adam Abd Elhaq I.D: 318239571
+-->
+
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mood Food - הוספת מתכון</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../css/general-styling.css">
+    <link rel="stylesheet" href="../css/add-mood.css">
+
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍔</text></svg>">
+</head>
+<body>
+
+    <header>
+        <a href="../index.html" class="logo-link">
+            <img src="../images/logo.png" alt="לוגו Mood Food" class="logo-img">
+        </a>
+        
+        <nav>
+            <ul>
+                <li><a href="../index.html">בית</a></li>
+                <li><a href="moods.html">תפריט מנות</a></li>
+                <li><a href="add-mood.html" class="active">הוספת מתכון</a></li>
+                <li><a href="about.html">אודות</a></li>
+                <li><a href="support.html">תמיכה</a></li>
+            </ul>
+        </nav>
+
+        <button class="hamburger" aria-label="תפריט ניווט">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <main class="form-container">
+        <section class="mood-form">
+            <h2>הוסיפו את המתכון שלכם 👨‍🍳</h2>
+            
+            <form action="add_mood_logic.php" method="POST" enctype="multipart/form-data" id="recipeForm" novalidate>
+                
+                <div id="errorBox" class="error-box"></div>
+                
+                <div class="form-section">
+                    <h3>מי השף?</h3>
+                    <div class="form-row">
+                        <div class="form-group half-width">
+                            <label for="uploaderName">השם שלך:</label>
+                            <input type="text" id="uploaderName" name="uploader_name" required placeholder="למשל: פאדי השף">
+                        </div>
+                        <div class="form-group half-width">
+                            <label for="uploaderImage">תמונה שלך:</label>
+                            <input type="file" id="uploaderImage" name="uploader_image" accept="image/*">
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="divider">
+
+                <div class="form-section">
+                    <h3>פרטי המנה</h3>
+                    
+                    <div class="form-group">
+                        <label for="dishName">שם המנה:</label>
+                        <input type="text" id="dishName" name="dish_name" required placeholder="למשל: פסטה ברוטב שמנת">
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group half-width">
+                            <label for="moodSelect">מצב רוח מתאים:</label>
+                            <select id="moodSelect" name="mood_category" required>
+                                <option value="" disabled selected>בחרו...</option>
+                                <option value="happy">שמח 😀</option>
+                                <option value="party">חגיגי 🥳</option>
+                                <option value="angry">עצבני 😡</option>
+                                <option value="stressed">לחוץ 😰</option>
+                                <option value="sad">מנחם (עצוב) 😢</option>
+                                <option value="random">תפתיעו אותי 🎲</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group half-width">
+                            <label for="prepTime">זמן הכנה (דקות):</label>
+                            <input type="number" id="prepTime" name="prep_time" min="1" required placeholder="30">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>רמת קושי (1 = קל, 5 = קשה):</label>
+                        <div class="difficulty-wrapper">
+                            <input type="radio" id="diff1" name="difficulty" value="1" required><label for="diff1">1</label>
+                            <input type="radio" id="diff2" name="difficulty" value="2"><label for="diff2">2</label>
+                            <input type="radio" id="diff3" name="difficulty" value="3"><label for="diff3">3</label>
+                            <input type="radio" id="diff4" name="difficulty" value="4"><label for="diff4">4</label>
+                            <input type="radio" id="diff5" name="difficulty" value="5"><label for="diff5">5</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group healthy-radio-container" id="healthyRadioContainer">
+                        <label class="healthy-main-label">🥗 איזה סוג מנה זו? (חובה לבחור)</label>
+                        <div class="healthy-options-wrapper">
+                            <label class="healthy-option">
+                                <input type="radio" name="is_healthy" value="1" class="radio-accent-green"> 
+                                מנה בריאה וקלילה
+                            </label>
+                            <label class="healthy-option">
+                                <input type="radio" name="is_healthy" value="0" class="radio-accent-red"> 
+                                מנה מושחתת / קלאסית
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="ingredients">רכיבים (מומלץ בשורות נפרדות):</label>
+                        <textarea id="ingredients" name="ingredients" rows="4" required placeholder="- 2 ביצים&#10;- כוס חלב&#10;- קמח..."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="instructions">הוראות הכנה:</label>
+                        <textarea id="instructions" name="instructions" rows="4" required placeholder="קודם כל מערבבים את..."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="dishImage">תמונה של המנה המוכנה:</label>
+                        <input type="file" id="dishImage" name="dish_image" accept="image/*" required>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-btn">שלח מתכון 🍲</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Mood Food - פאדי, אדם ואודיה</p>
+    </footer>
+
+    <script src="../js/script.js"></script>
+    <script src="../js/add-mood.js"></script>
+</body>
+</html>

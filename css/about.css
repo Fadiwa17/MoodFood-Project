@@ -1,0 +1,180 @@
+/* 
+Names of Submitters:
+Fadi Waheb I.D: 211629282
+Odaya Ifrach I.D: 212777155
+Adam Abd Elhaq I.D: 318239571 */
+
+
+/* --- 1. אזור הפתיח (Hero Section) --- */
+.hero-about {
+    margin-top: 80px; 
+    padding: 80px 20px;
+    text-align: center;
+    background: linear-gradient(to bottom, #111, #000);
+    border-bottom: 2px solid #222;
+}
+
+.hero-about h1 {
+    font-size: 3.5rem;
+    color: #66ff99;
+    margin-bottom: 15px;
+}
+
+.hero-about p {
+    font-size: 1.5rem;
+    color: #ccc;
+}
+
+/* --- 2. Main About Content --- */
+.about-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+.about-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 60px auto;
+}
+
+.about-content h2 {
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #b3b3b3;
+}
+
+/* --- 3. Mission & Vision Flex Layout --- */
+.mission-container {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 80px;
+    flex-wrap: wrap; 
+}
+
+.mission-item {
+    flex: 1;
+    min-width: 300px;
+    background-color: #1a1a1a;
+    padding: 40px;
+    border-radius: 15px;
+    border: 1px solid #333;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.mission-item:hover {
+    transform: translateY(-10px);
+    border-color: #66ff99;
+    box-shadow: 0 10px 25px rgba(102, 255, 153, 0.1);
+}
+
+.mission-item h3 {
+    color: #66ff99;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.mission-item p {
+    color: #ccc;
+    line-height: 1.6;
+}
+
+/* --- 4. חברי הצוות (Team Members Grid) --- */
+.team-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 40px;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    text-align: center;
+}
+
+.team-member {
+    background-color: #1a1a1a;
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid #333;
+    transition: all 0.3s ease;
+}
+
+.team-member:hover {
+    border-color: #66ff99;
+}
+
+.team-member img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #66ff99;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member:hover img {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(102, 255, 153, 0.3);
+}
+
+.team-member h3 {
+    color: white;
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.team-member p {
+    color: #888;
+    font-size: 1.1rem;
+}
+
+/* --- 5. התאמה למובייל (Mobile Responsiveness) --- */
+@media (max-width: 768px) {
+    .hero-about {
+        padding: 60px 15px;
+    }
+
+    /* הקטנת כותרות למניעת שבירת טקסט בנייד */
+    .hero-about h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-about p {
+        font-size: 1.2rem;
+    }
+
+    .mission-container {
+        gap: 20px;
+    }
+
+    .mission-item {
+        padding: 25px 15px;
+    }
+
+    /* ביטול אפקטים של ריחוף במסכי מגע למניעת תקלות משתמש */
+    .mission-item:hover {
+        transform: none;
+        box-shadow: none;
+        border-color: #333;
+    }
+
+    .team-member:hover {
+        border-color: #333;
+    }
+
+    .team-member:hover img {
+        transform: none;
+        box-shadow: none;
+    }
+}

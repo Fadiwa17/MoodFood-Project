@@ -1,0 +1,133 @@
+/* 
+Names of Submitters:
+Fadi Waheb I.D: 211629282
+Odaya Ifrach I.D: 212777155
+Adam Abd Elhaq I.D: 318239571 */
+
+/* --- 1. מעטפת ופריסה כללית (Layout & Container) --- */
+.success-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 500px; 
+    text-align: center;
+    padding: 120px 20px 40px 20px; 
+}
+
+.success-box {
+    margin: 0 auto;
+    width: 60%;
+    max-width: 500px;
+    padding: 40px;
+    border: solid 2px #66ff99;
+    background-color: #111;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* --- 2. טיפוגרפיה (Typography) --- */
+.party-emoji {
+    font-size: 50px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.success-box h1 {
+    color: #66ff99;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.success-box p {
+    font-size: 1.1rem;
+    color: #ddd;
+    margin-bottom: 20px;
+}
+
+/* --- 3. תצוגת תמונת המנה --- */
+.dish-preview-circle {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 4px solid #66ff99;
+    object-fit: cover;
+    margin: 20px auto;
+    box-shadow: 0 0 20px rgba(102, 255, 153, 0.3);
+    display: block;
+}
+
+/* מחלקות תצוגה חלופית במקרה של חוסר בתמונה */
+.no-image-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #222;
+    margin: 20px auto;
+}
+
+.no-image-text {
+    color: #555;
+    font-size: 1.2rem;
+}
+
+/* --- 4. כפתורי פעולה (Action Buttons) --- */
+.button-group {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+    justify-content: center;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #66ff99;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #4ce680;
+    transform: translateY(-3px);
+}
+
+.btn-view {
+    background-color: transparent;
+    border: 2px solid #66ff99;
+    color: #66ff99;
+}
+
+.btn-view:hover {
+    background-color: #66ff99;
+    color: black;
+}
+
+/* --- 5. התאמה למובייל (Mobile Responsiveness) --- */
+@media (max-width: 600px) {
+    .success-box {
+        width: 95%; /* הרחבת הקופסה במסכים קטנים למניעת דחיסת טקסט */
+        padding: 30px 20px;
+    }
+
+    .success-box h1 {
+        font-size: 1.6rem; /* הקטנת הכותרת למניעת שבירת שורות */
+    }
+
+    .button-group {
+        flex-direction: column; /* סידור הכפתורים אחד מתחת לשני */
+        gap: 15px;
+    }
+
+    .btn {
+        width: 100%; /* רוחב מלא לכפתור לטובת חוויית משתמש במסך מגע */
+        text-align: center;
+    }
+
+    .btn:hover {
+        transform: none; /* ביטול חיווי ריחוף בטלפון */
+    }
+}
